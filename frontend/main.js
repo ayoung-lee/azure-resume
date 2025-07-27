@@ -1,3 +1,5 @@
+// add counter function to display the number of visitors to the website
+
 window.addEventListener('DOMContentLoaded', event => {
   getVisitCount();
 });
