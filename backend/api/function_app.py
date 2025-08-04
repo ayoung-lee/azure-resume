@@ -24,7 +24,7 @@ def get_resume_counter(req: func.HttpRequest) -> func.HttpResponse:
 
         # Retrieve the item from the Cosmos DB (assuming ID is 1 and partition key is "1")
         counter_item = container.read_item(item="1", partition_key="1")
-        count = int(counter_item["count"])
+        count = counter_item["count"]
         
         # Increment the count
         counter_item["count"] = count + 1
